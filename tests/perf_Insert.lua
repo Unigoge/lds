@@ -1,7 +1,7 @@
 #!/usr/bin/env luajit
 -- lds - LuaJIT Data Structures
 --
--- Copyright (c) 2012-2014 Evan Wies.  All rights reserved.
+-- Copyright (c) 2012-2020 Evan Wies.  All rights reserved.
 -- MIT License, see the COPYRIGHT file.
 --
 -- Test insertion rate of various containers.
@@ -25,7 +25,7 @@ local NUMBER_OF_INSERTS = arg[1] and tonumber(arg[1]) or 1e6
 local ffi = require 'ffi'
 local C = ffi.C
 
-local lds = require 'lds/HashMap'
+local lds = require 'lds.HashMap'
 
 ffi.cdef("int rand(void);");
 local os_clock = os.clock

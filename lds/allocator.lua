@@ -1,7 +1,7 @@
 --[[
 lds - LuaJIT Data Structures
 
-@copyright Copyright (c) 2012-2014 Evan Wies.  All rights reserved.
+@copyright Copyright (c) 2012-2020 Evan Wies.  All rights reserved.
 @license MIT License, see the COPYRIGHT file.
 
 @module allocator
@@ -19,7 +19,7 @@ JemallocAllocator  uses jemalloc (if available)
 
 --]]
 
-local lds = require 'lds/init'
+local lds = require 'lds.init'
 
 local ffi = require 'ffi'
 local C = ffi.C
@@ -174,7 +174,7 @@ end
 --
 
 -- check for jemalloc
-local success, J =  pcall(function() return require 'lds/jemalloc' end)
+local success, J =  pcall(function() return require 'lds.jemalloc' end)
 
 if success and J then
 

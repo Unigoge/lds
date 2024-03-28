@@ -1,14 +1,14 @@
 --[[
 lds - LuaJIT Data Structures
 
-Copyright (c) 2012-2014 Evan Wies.  All rights reserved.
+Copyright (c) 2012-2020 Evan Wies.  All rights reserved.
 MIT License, see the COPYRIGHT file.
 
 Exercises lds.HashMap
 --]]
 
 local ffi = require 'ffi'
-local lds = require 'lds/HashMap'
+local lds = require 'lds.HashMap'
 
 local int_t = ffi.typeof('int')
 local double_t = ffi.typeof('double')

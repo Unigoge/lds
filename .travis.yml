@@ -1,0 +1,32 @@
+# lds .travis.yml
+# Copyright (c) 2020 Evan Wies
+#
+# Testing on Travis CI
+#
+# https://travis-ci.org/neomantra/lds
+#
+
+sudo: required
+
+dist: bionic
+
+addons:
+  apt:
+    packages:
+    - luajit
+    - luarocks
+    - g++
+    - libboost1.62-dev
+
+jobs:
+  include:
+    - stage: run unit tests
+      script: ./tests/run_tests.sh
+
+    - stage: test building the rockspec
+      script: sudo luarocks build rockspecs/lds-scm-1.rockspec
+
+    - stage: run performance tests
+      script:
+      - ./tests/perf_Insert.lua
+      - g++ -o perf_unordered_map_insert -O3 tests/perf_unordered_map_insert.cpp &&  ./perf_unordered_map_insert 

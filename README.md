@@ -1,6 +1,8 @@
 
 # lds - LuaJIT Data Structures
 
+[![Travis Status](https://travis-ci.org/neomantra/lds.svg?branch=master)](https://travis-ci.org/neomantra/lds)
+
 **lds** provides data structures which hold [LuaJIT *cdata*](http://luajit.org/ext_ffi_api.html).   
 
 These containers cover the common use cases of Lua *tables*:
@@ -9,18 +11,34 @@ These containers cover the common use cases of Lua *tables*:
   * Vector (dynamically-sized array)
   * HashMap (key-value store)
 
-## Installation
-
-This library is currently only available as a [GitHub repo](https://github.com/neomantra/lds):
-```
-git clone https://github.com/neomantra/lds.git
-```
-
-To install, clone the repo and copy `lds.lua` and the **lds** directory (the one *inside* the repo) to somewhere on your LUA_PATH.  To use, simply `require` the module and use the returned value:
+After installing the library, simply `require` the module and use the returned value:
 ```
 local lds = require 'lds'
 ```
 
+## Manual Installation
+
+This library is currently only available as a [GitHub repo](https://github.com/neomantra/lds). To install, clone the repo and copy `lds.lua` and the **lds** directory (the one *inside* the repo) to somewhere on your `LUA_PATH`.
+
+
+```
+# The path   /usr/local/share/lua/5.1  is just an example, it is common on Ubuntu platforms
+
+git clone https://github.com/neomantra/lds.git
+cp -r lds/lds.lua lds/lds    /usr/local/share/lua/5.1
+```
+
+
+## LuaRocks Installation
+
+To install from the [LuaRocks](https://luarocks.org/) [rockspec](https://github.com/neomantra/lds/blob/master/rockspecs/lds-scm-1.rockspec):
+
+```
+git clone https://github.com/neomantra/lds.git
+luarocks build rockspecs/lds-scm-1.rockspec
+```
+
+This library is *NOT* officially loaded to the LuaRocks repository.
 
 ## Example
 
@@ -97,8 +115,6 @@ The source is well documented and the implementation is decently readable -- muc
 
   * ldoc in wiki
   * TODOs in HashMap
-  * Rockspec
-
 
 ## Support
 
@@ -121,7 +137,7 @@ Many thanks to Professor Pat Morin for a well written textbook and readable impl
 
 > lds - LuaJIT Data Structures
 > 
-> Copyright (c) 2012-2014 Evan Wies.  All rights reserved
+> Copyright (c) 2012-2020 Evan Wies.  All rights reserved
 > 
 > Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 > 

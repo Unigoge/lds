@@ -1,7 +1,7 @@
 --[[
 lds - LuaJIT Data Structures
 
-@copyright Copyright (c) 2012-2014 Evan Wies.  All rights reserved.
+@copyright Copyright (c) 2012-2020 Evan Wies.  All rights reserved.
 @license MIT License, see the COPYRIGHT file.
 
 @type Array
@@ -17,7 +17,7 @@ Conventions:
 
 --]]
 
-local lds = require 'lds/allocator'
+local lds = require 'lds.allocator'
 
 local ffi = require 'ffi'
 local C = ffi.C

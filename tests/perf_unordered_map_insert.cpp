@@ -1,7 +1,7 @@
 //
 // lds - LuaJIT Data Structures
 //
-// Copyright (c) 2012-2014 Evan Wies.  All rights reserved.
+// Copyright (c) 2012-2020 Evan Wies.  All rights reserved.
 // MIT License, see the COPYRIGHT file.
 //
 // Inserts a number of random points
@@ -14,7 +14,7 @@
 //    -I/opt/local/include
 
 #include <cstdlib>
-#include <cstdio>
+#include <iostream>
 #include <sys/time.h>
 #include <vector>
 #include <boost/lexical_cast.hpp>
